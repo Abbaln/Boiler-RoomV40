@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Notflix Parody</title>
+     <title>Notflix Parody</title>
     <link rel="stylesheet" href="utils.css">
   </head>
   <body>
@@ -23,6 +23,83 @@
         Pop a Movie
       </button>
     </header>
+    <header class="hero">
+      <div class="hero__video-container">
+        <iframe 
+          class="hero__video"
+          src="https://www.youtube.com/embed/FaR1mQ2b0Ck?autoplay=1&mute=1&controls=0&loop=1&playlist=FaR1mQ2b0Ck" 
+          frameborder="0" 
+          allow="autoplay; encrypted-media" 
+          allowfullscreen
+        ></iframe>
+      </div>
+      <div class="container hero__content">
+        <h1 class="hero__title">Movie Title</h1>
+        <p class="hero__description">Movie description...</p>
+        <div class="hero__buttons">
+          <button class="btn">Play</button>
+          <button class="btn" style="background-color: rgba(109, 109, 110, 0.7);">More Info</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="movie-row news">
+        <div class="container">
+          <h2 class="movie-row__title">New Releases</h2>
+          <div class="movie-row__grid">
+            <div class="movie-item">
+              <img src="path/to/new-movie1.jpg" alt="New Movie 1" class="movie-item__image">
+              <h3 class="movie-item__title">New Movie 1</h3>
+            </div>
+            <div class="movie-item">
+              <img src="path/to/new-movie2.jpg" alt="New Movie 2" class="movie-item__image">
+              <h3 class="movie-item__title">New Movie 2</h3>
+            </div>
+            <div class="movie-item">
+              <img src="path/to/new-movie3.jpg" alt="New Movie 3" class="movie-item__image">
+              <h3 class="movie-item__title">New Movie 3</h3>
+            </div>
+            <div class="movie-item hide-on-mobile">
+              <img src="path/to/new-movie4.jpg" alt="New Movie 4" class="movie-item__image">
+              <h3 class="movie-item__title">New Movie 4</h3>
+            </div>
+            <div class="movie-item hide-on-mobile">
+              <img src="path/to/new-movie5.jpg" alt="New Movie 5" class="movie-item__image">
+              <h3 class="movie-item__title">New Movie 5</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="movie-row recommendations">
+        <div class="container">
+          <h2 class="movie-row__title">Recommended for You</h2>
+          <div class="movie-row__grid">
+            <div class="movie-item">
+              <img src="path/to/rec-movie1.jpg" alt="Recommended Movie 1" class="movie-item__image">
+              <h3 class="movie-item__title">Recommended Movie 1</h3>
+            </div>
+            <div class="movie-item">
+              <img src="path/to/rec-movie2.jpg" alt="Recommended Movie 2" class="movie-item__image">
+              <h3 class="movie-item__title">Recommended Movie 2</h3>
+            </div>
+            <div class="movie-item">
+              <img src="path/to/rec-movie3.jpg" alt="Recommended Movie 3" class="movie-item__image">
+              <h3 class="movie-item__title">Recommended Movie 3</h3>
+            </div>
+            <div class="movie-item hide-on-mobile">
+              <img src="path/to/rec-movie4.jpg" alt="Recommended Movie 4" class="movie-item__image">
+              <h3 class="movie-item__title">Recommended Movie 4</h3>
+            </div>
+            <div class="movie-item hide-on-mobile">
+              <img src="path/to/rec-movie5.jpg" alt="Recommended Movie 5" class="movie-item__image">
+              <h3 class="movie-item__title">Recommended Movie 5</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <footer>
       <p>Notflix &copy; 2024</p>
