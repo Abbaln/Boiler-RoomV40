@@ -1,7 +1,23 @@
 # Boiler-RoomV40
+Agile Notes:
+
+First Stand-up (03/10/2024)
+
+
+Second Stand-up (03/10/2024)
+- discussed what was still in the product backlog what needed to be worked on (t.ex header styles) and who would work on it
+- what was still in progress and how long would it take to be completed 
+- everyone must add their work process into the ReadMe file as well as the notes form our Stand-ups
+- make sure to run accessibility tests on all pages and fixed whatever needs to be adjusted 
+- schedule next stand-up
+
+Third Stand-up (04/10/2024)
+
+
+
+Indivdual Process:
 
 Rhiannon
-
 I used cursor as my AI
 
 - I asked it to build a simple login form
