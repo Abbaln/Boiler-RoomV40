@@ -1,0 +1,115 @@
+/* Netflix-inspired color palette and theme */
+
+:root {
+  /* Primary colors */
+  --netflix-red: #e50914;
+  --netflix-black: #141414;
+  --netflix-white: #ffffff;
+
+  /* Secondary colors */
+  --netflix-dark-gray: #222222;
+  --netflix-light-gray: #b3b3b3;
+
+  /* Text colors */
+  --text-primary: var(--netflix-white);
+  --text-secondary: var(--netflix-light-gray);
+
+  /* Background colors */
+  --bg-primary: var(--netflix-black);
+  --bg-secondary: var(--netflix-dark-gray);
+
+  /* Accent colors */
+  --accent-primary: var(--netflix-red);
+  --accent-hover: #f40612;
+
+  /* Font settings */
+  --font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-size-base: 16px;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+
+  /* Spacing */
+  --spacing-small: 8px;
+  --spacing-medium: 16px;
+  --spacing-large: 24px;
+
+  /* Border radius */
+  --border-radius: 4px;
+
+  /* Transition */
+  --transition-speed: 0.3s;
+}
+
+/* Global styles */
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  line-height: 1.5;
+}
+
+a {
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: color var(--transition-speed) ease;
+}
+
+a:hover {
+  color: var(--text-secondary);
+}
+
+/* Button styles */
+.btn {
+  display: inline-block;
+  padding: var(--spacing-small) var(--spacing-medium);
+  background-color: var(--accent-primary);
+  color: var(--text-primary);
+  border: none;
+  border-radius: var(--border-radius);
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+  cursor: pointer;
+  transition: background-color var(--transition-speed) ease;
+}
+
+.btn:hover {
+  background-color: var(--accent-hover);
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-medium);
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-medium);
+}
+
+/* Netflix-style scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--netflix-dark-gray);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--netflix-light-gray);
+}
