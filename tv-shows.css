@@ -1,0 +1,180 @@
+/* TV Shows Page Styles */
+
+.show-list-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.show-list {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  padding: var(--spacing-medium) 0;
+}
+
+.show-list::-webkit-scrollbar {
+  height: 8px;
+}
+
+.show-list::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.show-list::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+.show-list::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.show-list {
+  scroll-snap-type: x mandatory;
+}
+
+.show-item {
+  scroll-snap-align: start;
+}
+
+.show-item {
+  flex: 0 0 auto;
+  margin-right: var(--spacing-medium);
+  position: relative;
+}
+
+.show-item img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  transition: transform var(--transition-speed);
+}
+
+.show-item:hover img {
+  transform: scale(1.05);
+}
+
+.show-item::after {
+  content: "\25B6"; /* Unicode for play triangle */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 48px;
+  color: rgba(255, 255, 255, 0.8);
+  opacity: 0;
+  transition: opacity var(--transition-speed);
+}
+
+.show-item:hover::after {
+  opacity: 1;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background-color: var(--bg-secondary);
+  padding: var(--spacing-medium);
+}
+
+.navbar .logo {
+  color: var(--accent-primary);
+  font-size: 24px;
+  font-weight: var(--font-weight-bold);
+  text-decoration: none;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  margin: 0 var(--spacing-medium);
+}
+
+.navbar ul li a {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: var(--font-size-base);
+  transition: color var(--transition-speed);
+}
+
+.navbar ul li a:hover {
+  color: var(--text-secondary);
+}
+
+main {
+  padding: var(--spacing-large);
+}
+
+.genre {
+  margin-bottom: var(--spacing-large);
+}
+
+.genre h2 {
+  font-size: 24px;
+  margin-bottom: var(--spacing-medium);
+}
+
+.show-list {
+  display: flex;
+  overflow-x: auto;
+  gap: var(--spacing-medium);
+}
+
+.show-item {
+  flex: 0 0 auto;
+  width: 200px;
+  transition: transform var(--transition-speed);
+}
+
+.show-item:hover {
+  transform: scale(1.05);
+}
+
+.show-item img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+}
+
+footer {
+  background-color: var(--bg-secondary);
+  color: var(--text-secondary);
+  text-align: center;
+  padding: var(--spacing-medium);
+  margin-top: var(--spacing-large);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar ul {
+    margin-top: var(--spacing-medium);
+  }
+
+  .show-item {
+    width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .show-item {
+    width: 120px;
+  }
+}
