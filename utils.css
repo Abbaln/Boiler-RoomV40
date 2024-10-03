@@ -8,7 +8,7 @@
 
   /* Secondary colors */
   --netflix-dark-gray: #222222;
-  --netflix-light-gray: #b3b3b3;
+  --netflix-light-gray: #9c9c9c;
 
   /* Text colors */
   --text-primary: var(--netflix-white);
@@ -20,7 +20,7 @@
 
   /* Accent colors */
   --accent-primary: var(--netflix-red);
-  --accent-hover: #f40612;
+  --accent-hover: #b30710;
 
   /* Font settings */
   --font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -38,6 +38,10 @@
 
   /* Transition */
   --transition-speed: 0.3s;
+
+  /* Focus outline */
+  --focus-outline-color: #ffffff;
+  --focus-outline-width: 2px;
 }
 
 /* Global styles */
@@ -50,14 +54,22 @@ body {
   line-height: 1.5;
 }
 
+/* Updated styles for better accessibility */
 a {
   color: var(--text-primary);
-  text-decoration: none;
+  text-decoration: none; /* Changed from underline to none */
   transition: color var(--transition-speed) ease;
 }
 
-a:hover {
-  color: var(--text-secondary);
+a:hover,
+a:focus {
+  color: var(--netflix-red);
+  text-decoration: none;
+}
+
+a:focus {
+  outline: var(--focus-outline-width) solid var(--focus-outline-color);
+  outline-offset: 2px;
 }
 
 /* Button styles */
@@ -72,10 +84,20 @@ a:hover {
   text-align: center;
   cursor: pointer;
   transition: background-color var(--transition-speed) ease;
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 0.5rem 1rem;
+  text-decoration: none; /* Add this line to remove underline */
 }
 
-.btn:hover {
+.btn:hover,
+.btn:focus {
   background-color: var(--accent-hover);
+  outline: none;
+}
+
+.btn:focus {
+  box-shadow: 0 0 0 var(--focus-outline-width) var(--focus-outline-color);
 }
 
 /* Container */
@@ -106,10 +128,10 @@ h6 {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--netflix-dark-gray);
+  background: var(--netflix-light-gray);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--netflix-light-gray);
+  background: var(--text-secondary);
 }
