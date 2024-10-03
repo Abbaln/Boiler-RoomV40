@@ -88,39 +88,49 @@
   }
 }
 
-/* Lägg till detta i slutet av din befintliga index.css */
-
-.recommendations {
-  padding: var(--spacing-large) 0;
-  background-color: var(--bg-primary);
-}
-
-.recommendations__title {
-  font-size: 1.5rem;
-  margin-bottom: var(--spacing-medium);
-}
-
-.recommendations__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: var(--spacing-medium);
-}
-
-.recommendation-item {
-  transition: transform var(--transition-speed) ease;
-}
-
-.recommendation-item:hover {
-  transform: scale(1.05);
-}
-
-.recommendation-item__image {
-  width: 100%;
-  height: auto;
-  border-radius: var(--border-radius);
-}
-
-.recommendation-item__title {
-  font-size: 1rem;
-  margin-top: var(--spacing-small);
-}
+/* Gemensamma stilar för movie-row (nyheter och rekommendationer) */
+.movie-row {
+    padding: var(--spacing-large) 0;
+    background-color: var(--bg-primary);
+  }
+  
+  .movie-row__title {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-medium);
+  }
+  
+  .movie-row__grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: var(--spacing-medium);
+  }
+  
+  .movie-item {
+    transition: transform var(--transition-speed) ease;
+  }
+  
+  .movie-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .movie-item__image {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+  }
+  
+  .movie-item__title {
+    font-size: 1rem;
+    margin-top: var(--spacing-small);
+  }
+  
+  /* Responsiv design för movie-row */
+  @media (max-width: 768px) {
+    .movie-row__grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  
+    .hide-on-mobile {
+      display: none;
+    }
+  }
