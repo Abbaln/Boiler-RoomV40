@@ -3,59 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Netflix-Style Navbar</title>
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-      }
-      .navbar {
-        background-color: #141414;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 20px;
-        position: fixed;
-        width: 100%;
-        top: 0;
-        z-index: 1000;
-      }
-      .navbar .logo {
-        color: #e50914;
-        font-size: 24px;
-        font-weight: bold;
-        text-decoration: none;
-      }
-      .navbar ul {
-        list-style: none;
-        display: flex;
-        margin: 0;
-        padding: 0;
-      }
-      .navbar ul li {
-        margin: 0 15px;
-      }
-      .navbar ul li a {
-        color: #fff;
-        text-decoration: none;
-        font-size: 16px;
-      }
-      .navbar ul li a:hover {
-        color: #b3b3b3;
-      }
-    </style>
+    <title>Notflix Parody</title>
+    <link rel="stylesheet" href="utils.css">
   </head>
   <body>
-    <div class="navbar">
-      <a href="#" class="logo">Netflix</a>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="/tv-shows.html">TV Shows</a></li>
-        <li><a href="/movie-category.html">Movies</a></li>
-        <li><a href="/sign-in.html">Sign-In</a></li>
-        <li><a href="#">My List</a></li>
-      </ul>
-    </div>
+    <header>
+      <a href="#" class="logo">Notflix</a>
+      <nav>
+        <span class="menu-toggle">&#9776;</span>
+        <ul>
+          <li><a href="#">Home(ish)</a></li>
+          <li><a href="movie-category.html">TV Meh</a></li>
+          <li><a href="movie.html">B-Movies</a></li>
+          <li><a href="#">My Maybe List</a></li>
+          <li><a href="#">Sign in</a></li>
+        </ul>
+      </nav>
+      <button class="popcorn-btn">
+        Pop a Movie
+      </button>
+    </header>
+
+    <footer>
+      <p>Notflix &copy; 2024</p>
+      <section class="footer-icons">
+        <figure></figure>
+        <figure></figure>
+        <figure></figure>
+      </section>
+    </footer>
+
+    <script>
+      // JavaScript för hamburgarmeny på små skärmar
+      document.querySelector('.menu-toggle').addEventListener('click', function() {
+        document.querySelector('nav ul').classList.toggle('active');
+      });
+
+      // Simulera slumpmässig film-knapp
+      document.querySelector('.popcorn-btn').addEventListener('click', function() {
+        alert('Du får en slumpmässig film!');
+        // Lägg till riktig funktionalitet här om så önskas
+      });
+    </script>
   </body>
 </html>
+
