@@ -4,19 +4,56 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flixnet</title>
-    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="utils.css">
+    <link rel="stylesheet" href="index.css">
   </head>
   <body>
-    <div class="navbar">
-      <a href="#" class="logo">Netflix</a>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">TV Shows</a></li>
-        <li><a href="#">Movies</a></li>
-        <li><a href="#">New & Popular</a></li>
-        <li><a href="#">My List</a></li>
-      </ul>
-    </div>
+    <nav aria-label="Main navigation">
+      <!-- Navigationsinnehåll här -->
+    </nav>
+
+    <header class="hero">
+      <div class="hero__video-container">
+        <iframe 
+          class="hero__video"
+          src="https://www.youtube.com/embed/dOHY2qsA_tM?autoplay=1&mute=1&controls=0&loop=1&playlist=dOHY2qsA_tM" 
+          frameborder="0" 
+          allow="autoplay; encrypted-media" 
+          allowfullscreen
+        ></iframe>
+      </div>
+      <div class="container hero__content">
+        <h1 class="hero__title">Movie Title</h1>
+        <p class="hero__description">Movie description...</p>
+        <div class="hero__buttons">
+          <button class="btn">Play</button>
+          <button class="btn" style="background-color: rgba(109, 109, 110, 0.7);">More Info</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="recommendations">
+        <div class="container">
+          <h2 class="recommendations__title">Recommended for You</h2>
+          <div class="recommendations__grid">
+            <!-- Här kommer rekommenderade filmer/serier -->
+            <div class="recommendation-item">
+              <img src="path/to/image1.jpg" alt="Movie 1 Title" class="recommendation-item__image">
+              <h3 class="recommendation-item__title">Movie 1 Title</h3>
+            </div>
+            <div class="recommendation-item">
+              <img src="path/to/image2.jpg" alt="Movie 2 Title" class="recommendation-item__image">
+              <h3 class="recommendation-item__title">Movie 2 Title</h3>
+            </div>
+            <!-- Lägg till fler rekommendationer här -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <!-- Sidfot här -->
+    </footer>
   </body>
 </html>
