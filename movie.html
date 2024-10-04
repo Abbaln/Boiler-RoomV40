@@ -5,27 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Movie Viewing Page</title>
     <link rel="stylesheet" href="utils.css" />
-    <!-- Add the following style tag or update your utils.css file -->
-    <style>
-      .movie-player {
-        width: 100%;
-        height: 0;
-        padding-bottom: 56.25%; /* 16:9 aspect ratio */
-        position: relative;
-        margin-bottom: 20px;
-      }
-      .movie-player iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-      }
-    </style>
+    <link rel="stylesheet" href="movie.css" />
   </head>
+
   <body>
-    <div class="container">
-      <div class="movie-player">
+    <header>
+      <a href="#" class="logo" aria-label="Notflix home">Notflix</a>
+      <nav aria-label="Main navigation">
+        <span class="menu-toggle" aria-label="Toggle menu">&#9776;</span>
+        <ul>
+          <li><a href="#" aria-label="Home page">Home(ish)</a></li>
+          <li>
+            <a href="movie-category.html" aria-label="TV shows category"
+              >TV Meh</a
+            >
+          </li>
+          <li>
+            <a href="movie.html" aria-label="B-Movies category">B-Movies</a>
+          </li>
+          <li><a href="#" aria-label="My watchlist">My Maybe List</a></li>
+          <li><a href="sign-in.html" aria-label="Sign in page">Sign in</a></li>
+        </ul>
+      </nav>
+      <button class="popcorn-btn" aria-label="Pop a random movie">
+        Pop a Movie
+      </button>
+    </header>
+    <main class="container">
+      <section class="movie-player" aria-label="Movie trailer player">
         <!-- YouTube embed for Minions movie trailer -->
         <iframe
           width="100%"
@@ -36,46 +43,55 @@
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
         ></iframe>
-      </div>
-      <div class="movie-info">
-        <div class="movie-details">
-          <h1 class="movie-title">Movie Title</h1>
-          <p class="movie-description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </p>
-          <div class="movie-metadata">
-            <span>2023</span> | <span>2h 15min</span> |
-            <span>Action, Adventure</span>
-          </div>
+      </section>
+
+      <section class="movie-info" aria-label="Movie information">
+        <div class="movie-details-grid">
+          <article class="movie-description">
+            <h2>Description</h2>
+            <p>
+              "Minions: The Rise of Gru" is a comedic animated prequel set in
+              the 1970s. 12-year-old Gru aspires to join the Vicious 6
+              supervillain group, aided by his loyal Minions. This origin story
+              follows Gru's misadventures as he learns about friendship and
+              pursuing dreams, all while causing mischief with his yellow
+              companions.
+            </p>
+          </article>
+
+          <aside class="movie-metadata-container">
+            <h2>Movie Details</h2>
+            <div class="movie-metadata" aria-label="Movie metadata">
+              <span>2023</span> | <span>2h 15min</span> |
+              <span>Action, Adventure</span>
+            </div>
+            <section class="related-movies">
+              <h3>Related Movies</h3>
+              <div class="related-movie" aria-label="Related movie 1">
+                <img
+                  src="https://via.placeholder.com/100x56.png?text=Related+Movie"
+                  alt="Related Movie 1"
+                />
+                <span class="related-movie-title">Related Movie 1</span>
+              </div>
+              <div class="related-movie" aria-label="Related movie 2">
+                <img
+                  src="https://via.placeholder.com/100x56.png?text=Related+Movie"
+                  alt="Related Movie 2"
+                />
+                <span class="related-movie-title">Related Movie 2</span>
+              </div>
+              <div class="related-movie" aria-label="Related movie 3">
+                <img
+                  src="https://via.placeholder.com/100x56.png?text=Related+Movie"
+                  alt="Related Movie 3"
+                />
+                <span class="related-movie-title">Related Movie 3</span>
+              </div>
+            </section>
+          </aside>
         </div>
-        <div class="related-movies">
-          <h3>Related Movies</h3>
-          <div class="related-movie">
-            <img
-              src="https://via.placeholder.com/100x56.png?text=Related+Movie"
-              alt="Related Movie"
-            />
-            <span class="related-movie-title">Related Movie 1</span>
-          </div>
-          <div class="related-movie">
-            <img
-              src="https://via.placeholder.com/100x56.png?text=Related+Movie"
-              alt="Related Movie"
-            />
-            <span class="related-movie-title">Related Movie 2</span>
-          </div>
-          <div class="related-movie">
-            <img
-              src="https://via.placeholder.com/100x56.png?text=Related+Movie"
-              alt="Related Movie"
-            />
-            <span class="related-movie-title">Related Movie 3</span>
-          </div>
-        </div>
-      </div>
-    </div>
+      </section>
+    </main>
   </body>
 </html>
