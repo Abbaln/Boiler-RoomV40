@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="movie-test.css" />
   </head>
   <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <header>
       <a href="/">
         <img src="notflix-log.png" alt="Notflix Logo" class="logo-image" />
@@ -23,7 +24,7 @@
       </nav>
     </header>
 
-    <main>
+    <main id="main-content">
       <section id="quiz-container">
         <h1>Discover Your Perfect Movie Match!</h1>
         <div id="question-container">
@@ -34,6 +35,11 @@
         <div id="result" class="hide">
           <h2>Your Movie Recommendation:</h2>
           <p id="movie-recommendation"></p>
+          <div id="movie-poster-container">
+            <a id="movie-link" href="#" target="_blank" rel="noopener noreferrer">
+              <img id="movie-poster" src="" alt="Movie poster" />
+            </a>
+          </div>
         </div>
       </section>
     </main>

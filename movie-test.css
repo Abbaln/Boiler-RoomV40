@@ -1,11 +1,13 @@
 /* Lägg till detta i början av test.css */
 main {
-  padding-top: 100px; /* Justera detta värde baserat på din headers höjd */
+  padding-top: 80px; /* Justera detta värde baserat på din headers höjd */
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 /* Specifika stilar för quiz-containern */
 #quiz-container {
-  max-width: 600px;
+  max-width: 800px;
   margin: 2rem auto;
   padding: 2rem;
   background-color: var(--bg-secondary);
@@ -17,16 +19,27 @@ main {
   margin-bottom: var(--spacing-large);
 }
 
+/* Uppdatera den befintliga stilen för #answer-buttons */
 #answer-buttons {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr); /* 2 kolumner */
+  grid-template-rows: repeat(2, auto); /* 2 rader */
   gap: var(--spacing-medium);
+  max-width: 600px; /* Begränsa maxbredden för bättre layout på stora skärmar */
+  margin: 0 auto; /* Centrera knapparna */
 }
 
 /* Använd den befintliga .btn-klassen från utils.css */
 /* Lägg endast till specifika stilar som inte finns i utils.css */
 .btn {
   width: 100%;
+  padding: 15px 10px; /* Öka padding för bättre klickbarhet */
+  font-size: 1rem;
+  text-align: center;
+  min-height: 60px; /* Sätt en minsta höjd för jämn storlek */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hide {
@@ -41,11 +54,139 @@ main {
   font-size: 1.2rem;
   font-weight: var(--font-weight-bold);
   color: var(--accent-primary);
+  margin-bottom: var(--spacing-medium);
 }
 
 /* Mediafrågor för responsivitet */
 @media (max-width: 768px) {
-  #answer-buttons {
-    grid-template-columns: 1fr;
+  #quiz-container {
+    padding: 1rem;
   }
+
+  #answer-buttons {
+    grid-template-columns: 1fr; /* Ändra till en kolumn på mindre skärmar */
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 12px 8px;
+    min-height: 50px;
+  }
+
+  #movie-recommendation {
+    font-size: 1rem;
+  }
+
+  #movie-link::after {
+    font-size: 2rem;
+    padding: 10px;
+  }
+}
+
+/* Lägg till dessa stilar i slutet av filen */
+#movie-poster-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px; /* Öka maxbredden för att passa 16:9-formatet bättre */
+  margin: var(--spacing-large) auto 0;
+  aspect-ratio: 16 / 9; /* Ändra till 16:9-format */
+  overflow: hidden;
+  border-radius: 12px; /* Lägg till rundade hörn på containern */
+}
+
+#movie-poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Behåll detta för att säkerställa att bilden fyller containern */
+  border-radius: 12px; /* Lägg till rundade hörn på bilden */
+  transition: transform 0.3s ease;
+}
+
+#movie-link:hover #movie-poster {
+  transform: scale(1.05);
+}
+
+#movie-link::after {
+  content: '\25B6'; /* Unicode-tecken för "play" symbol */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 15px;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#movie-link:hover::after {
+  opacity: 1;
+}
+
+/* Responsiva justeringar */
+@media (max-width: 480px) {
+  main {
+    padding-top: 60px;
+  }
+
+  #quiz-container {
+    margin: 1rem auto;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  #question {
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    padding: 8px;
+    font-size: 0.8rem;
+    min-height: 40px;
+  }
+
+  #movie-recommendation {
+    font-size: 0.9rem;
+  }
+
+  #movie-poster-container {
+    max-width: 100%; /* Gör containern fullbredd på små skärmar */
+  }
+}
+
+.skip-link {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link:focus,
+.skip-link:active {
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+  background: var(--bg-primary);
+  color: var(--text-color);
+  padding: 8px;
+  z-index: 1000;
+  text-align: center;
+  text-decoration: none;
+  outline: 2px solid var(--accent-primary);
+}
+
+.skip-link:hover {
+  text-decoration: underline;
 }
