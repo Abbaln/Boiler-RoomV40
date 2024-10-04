@@ -4,28 +4,32 @@ Repo: https://github.com/Abbaln/Boiler-RoomV40
 Trello: https://trello.com/b/77nffjUa/boiler-roomv40
 
 # Boiler-RoomV40
+
 Agile Notes:
 
 First Stand-up (03/10/2024)
+
 - Möte i ca 1 timme
 - Kort retro om förra projektet: bra samarbete, vi börjar hitta vårt arbetssätt, vi vill använda Trellon bättre, jobba mer likriktat med styling i CSS, let’s bestämma dessa tidigt och utgå från det på de egna sidorna. Vi vill ha en scrum-master som styr upp lite mer. Vi är nöjda med hur vi arbetar med Git och branching.
-– Vi utsedde Abbas till SCRUM master (vi ska rotera varje vecka och SCRUM-master är också fika master och tar med fika till boiler room 🍩)
-– Bestämde applikation, en streamingtjänst och vilka undersidor den skulle ha
-– Vi satte upp vår Trello tillsammans, med kort och byggde vår backlog
-–Promptade med hjälp av Cursor och Chat-GPT fram ett universal stylesheet i två steg, först: “ta fram stilar för en streamingsajt som netflix” sen: “gör den typ likadan men den ska följa WCAG-standard AA-nivå”.
-–Vi bestämde tid för stand up och satte igång att arbeta med vår backlog.
-
+  – Vi utsedde Abbas till SCRUM master (vi ska rotera varje vecka och SCRUM-master är också fika master och tar med fika till boiler room 🍩)
+  – Bestämde applikation, en streamingtjänst och vilka undersidor den skulle ha
+  – Vi satte upp vår Trello tillsammans, med kort och byggde vår backlog
+  –Promptade med hjälp av Cursor och Chat-GPT fram ett universal stylesheet i två steg, först: “ta fram stilar för en streamingsajt som netflix” sen: “gör den typ likadan men den ska följa WCAG-standard AA-nivå”.
+  –Vi bestämde tid för stand up och satte igång att arbeta med vår backlog.
 
 Second Stand-up (03/10/2024)
+
 - discussed what was still in the product backlog what needed to be worked on (t.ex header styles) and who would work on it
-- what was still in progress and how long would it take to be completed 
+- what was still in progress and how long would it take to be completed
 - everyone must add their work process into the ReadMe file as well as the notes form our Stand-ups
-- make sure to run accessibility tests on all pages and fixed whatever needs to be adjusted 
+- make sure to run accessibility tests on all pages and fixed whatever needs to be adjusted
 - schedule next stand-up
 
 Third Stand-up (04/10/2024)
 
-
+- Checkade av hur allas arbetsområden går.
+- Hjälpte varandra att felsöka och reda ut vissa problem, samt testade varandras sidor för att se vad som behövs utvecklas.
+- Samtalade om tillgänglighet och testade sidorna med wave och lighthouse.
 
 Indivdual Process:
 
@@ -48,5 +52,6 @@ Jag använde också Cursor, smidigt verktyg.
 - Dundrade in prompts och bad den göra en sida likt netflix där en kan scrolla mellan olika titlar
 - Blev sådär, men det gav mig en tydligare bild av vad jag ville ändra och förbättra, hellre än att hitta på något eget helt själv.
 - Pusslade med prompts från smådetaljer till hela layouten. Fastnade i scrollfunktionen ganska länge, och kom inte överens med Cursor hur jag skulle kommunicera med den. I det läget gick det mycket snabbare att bara kolla på koden och ändra manuellt, än att försöka prompta fram svaren.
+- Andra sessionen gick mycket smidigare. Blev snabbare att överväga vad som går snabbare att göra själv och vad som går snabbare på att generera fullt ut. Cursors chatfunktion funkade kanon för att bolla idéer, istället för att generera hej villt.
 
 Boiler-RoomV40
