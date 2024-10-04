@@ -1,35 +1,50 @@
 /* Hero styles */
 hero {
-  display: block;
+  display: flex;
+  flex-direction: column;
   position: relative;
   height: 100vh;
   width: 100%;
   overflow: hidden;
 }
 
+/* Styla hero-content */
+hero .hero-content {
+  position: relative;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.7); /* Lägg till en mörk bakgrund för bättre läsbarhet */
+  padding: var(--spacing-large);
+  text-align: center;
+}
+
+hero .hero-content h1 {
+  font-size: 3rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+hero .hero-content p {
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+/* Justera video-container */
 hero .video-container {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 10;
 }
 
-hero .background-video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
+/* Justera content-sektionen */
 hero .content {
   position: relative;
-  z-index: 10;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  z-index: 20;
+  margin-top: auto; /* Flytta innehållet till botten av hero-sektionen */
   padding: var(--spacing-large);
+  background-color: rgba(0, 0, 0, 0.7); /* Lägg till en mörk bakgrund för bättre läsbarhet */
 }
 
 hero .title {
