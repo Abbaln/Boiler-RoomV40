@@ -148,12 +148,15 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 20px 0px;
   position: sticky;
   width: 100%;
   top: 0;
   z-index: 1000;
   height: 80px;
+}
+header a {
+  padding: 0px 10px;
 }
 
 .logo {
