@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="utils.css" />
+    <link rel="stylesheet" href="sign-in.css" />
+    <title>Sign-In</title>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#" class="logo">Netflix</a>
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="#">TV Shows</a></li>
+          <li><a href="/movie.html">Movies</a></li>
+          <li><a href="/sign-in.html">Sign-In</a></li>
+          <li><a href="#">My List</a></li>
+        </ul>
+      </div>
+      <div class="login-container">
+        <h1>Sign In</h1>
+        <form class="login-form" action="/login" method="post">
+            <div class="form-group">
+                <label for="username">Email or phone number</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Sign In</button>
+        </form>
+    </div>
+</body>
+</html>

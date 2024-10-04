@@ -52,6 +52,13 @@ body {
   color: var(--text-primary);
   background-color: var(--bg-primary);
   line-height: 1.5;
+
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* Updated styles for better accessibility */
@@ -134,4 +141,198 @@ h6 {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--text-secondary);
+}
+
+header {
+  background-color: #222;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  height: 80px;
+}
+
+.logo {
+  color: #ff5722;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+  padding: 0 20px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 0 15px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+a:hover {
+  color: #ccc;
+}
+
+/* Popcorn-knapp */
+.popcorn-btn {
+background-color: #ffcc00;
+border: 2px solid #ff5722;
+color: #222;
+padding: 15px 30px;
+font-size: 18px;
+font-family: 'Courier New', Courier, monospace;
+cursor: pointer;
+text-align: center;
+border-radius: 50px;
+transition: background-color 0.3s ease;
+display: flex;
+justify-content: center;
+align-items: center;
+box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.5);
+position: absolute;
+top: 50%;
+left: 45%; /* Justera här för att flytta knappen åt vänster */
+transform: translate(-50%, -50%);
+z-index: 10;
+}
+
+
+.popcorn-btn:hover {
+  background-color: #ffb300;
+}
+
+.popcorn-btn::before {
+  content: '🍿';
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+footer {
+  background-color: #333;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  margin-top: auto;
+}
+
+section.footer-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+figure {
+  background-color: #444;
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+figure::before {
+  content: "?"; /* Placeholder för fejk-ikoner */
+  color: white;
+  font-size: 20px;
+}
+
+/* Hamburgarmeny för små skärmar */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    display: none;
+    background-color: #333;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 10px;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .popcorn-btn {
+    position: static;
+    margin: 10px auto;
+    transform: translate(0, 0);
+  }
+}
+
+/* Popcorn-knapp */
+.popcorn-btn {
+background-color: #ffcc00;
+border: 2px solid #ff5722;
+color: #222;
+padding: 15px 30px;
+font-size: 18px;
+font-family: 'Courier New', Courier, monospace;
+cursor: pointer;
+text-align: center;
+border-radius: 50px;
+transition: background-color 0.3s ease;
+display: flex;
+justify-content: center;
+align-items: center;
+box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.5);
+position: absolute;
+top: 50%;
+left: 45%;
+transform: translate(-50%, -50%);
+z-index: 10;
+}
+
+/* Göra knappen mindre på mindre skärmar */
+@media (max-width: 768px) {
+.popcorn-btn {
+padding: 10px; /* Minska padding */
+font-size: 0; /* Dölja text */
+width: 50px; /* Sätt en fast bredd för knappen */
+height: 50px; /* Sätt en fast höjd för knappen */
+background-color: transparent; /* Göra bakgrunden transparent */
+}
+
+/* Visa endast popcorn-emojin */
+.popcorn-btn::before {
+content: "🍿"; /* Använd popcorn-emojin */
+font-size: 40px; /* Justera storleken på emojin */
+}
 }

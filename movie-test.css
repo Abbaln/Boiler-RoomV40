@@ -1,0 +1,51 @@
+/* Lägg till detta i början av test.css */
+main {
+  padding-top: 100px; /* Justera detta värde baserat på din headers höjd */
+}
+
+/* Specifika stilar för quiz-containern */
+#quiz-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--bg-secondary);
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+#question-container {
+  margin-bottom: var(--spacing-large);
+}
+
+#answer-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-medium);
+}
+
+/* Använd den befintliga .btn-klassen från utils.css */
+/* Lägg endast till specifika stilar som inte finns i utils.css */
+.btn {
+  width: 100%;
+}
+
+.hide {
+  display: none;
+}
+
+#result {
+  text-align: center;
+}
+
+#movie-recommendation {
+  font-size: 1.2rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--accent-primary);
+}
+
+/* Mediafrågor för responsivitet */
+@media (max-width: 768px) {
+  #answer-buttons {
+    grid-template-columns: 1fr;
+  }
+}
