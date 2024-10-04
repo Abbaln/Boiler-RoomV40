@@ -27,6 +27,10 @@ Second Stand-up (03/10/2024)
 
 Third Stand-up (04/10/2024)
 
+- Checkade av hur allas arbetsområden går.
+- Hjälpte varandra att felsöka och reda ut vissa problem, samt testade varandras sidor för att se vad som behövs utvecklas.
+- Samtalade om tillgänglighet och testade sidorna med wave och lighthouse.
+
 Fourth Stand-up (04/10/2024)
 
 - Statusrapport
@@ -54,6 +58,7 @@ Jag använde också Cursor, smidigt verktyg.
 - Dundrade in prompts och bad den göra en sida likt netflix där en kan scrolla mellan olika titlar
 - Blev sådär, men det gav mig en tydligare bild av vad jag ville ändra och förbättra, hellre än att hitta på något eget helt själv.
 - Pusslade med prompts från smådetaljer till hela layouten. Fastnade i scrollfunktionen ganska länge, och kom inte överens med Cursor hur jag skulle kommunicera med den. I det läget gick det mycket snabbare att bara kolla på koden och ändra manuellt, än att försöka prompta fram svaren.
+- Andra sessionen gick mycket smidigare. Blev snabbare att överväga vad som går snabbare att göra själv och vad som går snabbare på att generera fullt ut. Cursors chatfunktion funkade kanon för att bolla idéer, istället för att generera hej villt.
 
 Dennis
 
