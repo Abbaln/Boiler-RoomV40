@@ -31,6 +31,12 @@ Third Stand-up (04/10/2024)
 - Hjälpte varandra att felsöka och reda ut vissa problem, samt testade varandras sidor för att se vad som behövs utvecklas.
 - Samtalade om tillgänglighet och testade sidorna med wave och lighthouse.
 
+Fourth Stand-up (04/10/2024)
+
+- Statusrapport
+- Se vad som behöver göras klart
+- Samarbeta med att felsöka små buggar
+
 Indivdual Process:
 
 Rhiannon
@@ -53,5 +59,13 @@ Jag använde också Cursor, smidigt verktyg.
 - Blev sådär, men det gav mig en tydligare bild av vad jag ville ändra och förbättra, hellre än att hitta på något eget helt själv.
 - Pusslade med prompts från smådetaljer till hela layouten. Fastnade i scrollfunktionen ganska länge, och kom inte överens med Cursor hur jag skulle kommunicera med den. I det läget gick det mycket snabbare att bara kolla på koden och ändra manuellt, än att försöka prompta fram svaren.
 - Andra sessionen gick mycket smidigare. Blev snabbare att överväga vad som går snabbare att göra själv och vad som går snabbare på att generera fullt ut. Cursors chatfunktion funkade kanon för att bolla idéer, istället för att generera hej villt.
+
+Dennis
+
+- Använde Cursor för att få en grundstruktur på färgtema i utils.css
+- Använde Cursor för att får grundstruktur på movie.html och movie.css, sen promptat majoriteten av stylen och layouten har skrivit väldigt lite av koden själv bara fixad smådetaljer.
+- Bad Cursor göra sidan mer accesible genom att sätta aria labels på alla element som saknade det och göra den mer responsiv.
+- Kört lighthouse test och fick 100% på allt.
+- Min reflektion över att använda enbart ai är det går väldigt snabbt i början sen blir det många konstiga fel för ai inte skapat ett bra skal i html med grid eller flex utan kört lite vilda västern. Kommer använda AI för att få fram en bas struktur och sedan jobba vidare själv om något i framtiden.
 
 Boiler-RoomV40
