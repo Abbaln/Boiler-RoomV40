@@ -19,7 +19,6 @@ body {
   padding-top: 56.25%; /* 16:9 aspect ratio */
   position: relative;
   margin-bottom: 20px;
-  margin-top: 85px; /* Adjust based on navbar height */
 }
 
 .movie-player iframe {
