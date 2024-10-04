@@ -31,8 +31,8 @@
         Pop a Movie
       </button>
     </header>
-    <div class="container">
-      <div class="movie-player" aria-label="Movie trailer player">
+    <main class="container">
+      <section class="movie-player" aria-label="Movie trailer player">
         <!-- YouTube embed for Minions movie trailer -->
         <iframe
           width="100%"
@@ -43,10 +43,11 @@
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
         ></iframe>
-      </div>
-      <div class="movie-info" aria-label="Movie information">
+      </section>
+
+      <section class="movie-info" aria-label="Movie information">
         <div class="movie-details-grid">
-          <div class="movie-description">
+          <article class="movie-description">
             <h2>Description</h2>
             <p>
               "Minions: The Rise of Gru" is a comedic animated prequel set in
@@ -56,14 +57,15 @@
               pursuing dreams, all while causing mischief with his yellow
               companions.
             </p>
-          </div>
-          <div class="movie-metadata-container">
+          </article>
+
+          <aside class="movie-metadata-container">
             <h2>Movie Details</h2>
             <div class="movie-metadata" aria-label="Movie metadata">
               <span>2023</span> | <span>2h 15min</span> |
               <span>Action, Adventure</span>
             </div>
-            <div class="related-movies">
+            <section class="related-movies">
               <h3>Related Movies</h3>
               <div class="related-movie" aria-label="Related movie 1">
                 <img
@@ -86,10 +88,10 @@
                 />
                 <span class="related-movie-title">Related Movie 3</span>
               </div>
-            </div>
-          </div>
+            </section>
+          </aside>
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
   </body>
 </html>
