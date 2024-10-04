@@ -1,5 +1,10 @@
 /* TV Shows Page Styles */
 
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 .show-list-container {
   position: relative;
   overflow: hidden;
@@ -124,11 +129,17 @@ main {
 
 .genre {
   margin-bottom: var(--spacing-large);
+  position: relative;
 }
 
 .genre h2 {
   font-size: 24px;
   margin-bottom: var(--spacing-medium);
+  position: sticky;
+  top: 0;
+  background-color: var(--bg-primary);
+  padding: var(--spacing-small) 0;
+  z-index: 1;
 }
 
 .show-list {
