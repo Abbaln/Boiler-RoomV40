@@ -3,16 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Notflix Parody</title>
+    <title>Notflix - Stream your favorite movies and TV shows</title>
     <link rel="stylesheet" href="utils.css" />
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <header>
       <a href="/">
-        <img src="notflix-log.png" alt="Notflix Logo" class="logo-image" />
+        <img src="notflix-log.png" alt="Notflix logo" class="logo-image" />
       </a>
-      <nav>
+      <nav aria-label="Main navigation">
         <span class="menu-toggle">&#9776;</span>
         <ul>
           <li><a href="tv-shows.html">TV</a></li>
@@ -22,32 +23,31 @@
         </ul>
       </nav>
     </header>
-    <main>
+    <main id="main-content">
       <section class="hero">
         <div class="video-container">
           <iframe
             class="background-video"
-            src="https://www.youtube.com/embed/FaR1mQ2b0Ck?autoplay=1&mute=1&controls=0&loop=1&playlist=FaR1mQ2b0Ck"
+            src="https://www.youtube.com/embed/FaR1mQ2b0Ck?autoplay=1&mute=1&controls=0&loop=1&playlist=FaR1mQ2b0Ck&modestbranding=1&rel=0&showinfo=0&fs=0&iv_load_policy=3"
             frameborder="0"
             allow="autoplay; encrypted-media"
             allowfullscreen
           ></iframe>
         </div>
         <div class="hero-content">
-          <h1 class="title">Titanic 2</h1>
-          <p class="description">
-            One day Jack knocks on Rose's door as if nothing ever happened. Why
-            did he fake his death and hide from her all these years? Will she be
-            able to trust him again? Watch the long-awaited sequel today!
-          </p>
+          <h1>Notflix presents</h1>
+          <p class="slogan">Binge-Worthy Nonsense</p>
+          <h2 class="title">Titanic 2</h2>
+          <p class="description">One day Jack knocks on Rose's door as if nothing ever happened. Why did he fake his death and hide from her all these years? Will she be able to trust him again? Watch the long-awaited sequel today!</p>
           <div class="buttons">
             <a
               href="https://www.amazon.com/gp/video/detail/B0041FZQQI/ref=atv_dp_share_cu_r"
               target="_blank"
               rel="noopener noreferrer"
               class="btn"
-              >Watch Titanic 2</a
-            >
+              aria-label="Watch Titanic 2 on Amazon Prime Video">
+              Watch Titanic 2
+            </a>
           </div>
         </div>
       </section>
@@ -59,7 +59,7 @@
             <a href="movie.html" class="movie-item">
               <img
                 src="https://i.ytimg.com/vi/6DxjJzmYsXo/maxresdefault.jpg"
-                alt="Watch Minions: The Rise of Gru"
+                alt="Movie poster for Minions: The Rise of Gru"
                 class="movie-item__image"
               />
               <h3 class="movie-item__title">Minions: The Rise of Gru</h3>
@@ -70,7 +70,7 @@
             <a href="movie.html" class="movie-item">
               <img
                 src="https://i.ytimg.com/vi/6DxjJzmYsXo/maxresdefault.jpg"
-                alt="Watch Minions: The Rise of Gru"
+                alt="Movie poster for Minions: The Rise of Gru"
                 class="movie-item__image"
               />
               <h3 class="movie-item__title">Minions: The Rise of Gru</h3>
@@ -81,7 +81,7 @@
             <a href="movie.html" class="movie-item">
               <img
                 src="https://i.ytimg.com/vi/6DxjJzmYsXo/maxresdefault.jpg"
-                alt="Watch Minions: The Rise of Gru"
+                alt="Movie poster for Minions: The Rise of Gru"
                 class="movie-item__image"
               />
               <h3 class="movie-item__title">Minions: The Rise of Gru</h3>
@@ -92,7 +92,7 @@
             <a href="movie.html" class="movie-item hide-on-mobile">
               <img
                 src="https://i.ytimg.com/vi/6DxjJzmYsXo/maxresdefault.jpg"
-                alt="Watch Minions: The Rise of Gru"
+                alt="Movie poster for Minions: The Rise of Gru"
                 class="movie-item__image"
               />
               <h3 class="movie-item__title">Minions: The Rise of Gru</h3>
@@ -103,7 +103,7 @@
             <a href="movie.html" class="movie-item hide-on-mobile">
               <img
                 src="https://i.ytimg.com/vi/6DxjJzmYsXo/maxresdefault.jpg"
-                alt="Watch Minions: The Rise of Gru"
+                alt="Movie poster for Minions: The Rise of Gru"
                 class="movie-item__image"
               />
               <h3 class="movie-item__title">Minions: The Rise of Gru</h3>
@@ -117,12 +117,12 @@
 
       <section class="movie-row recommendations">
         <div class="container">
-          <h2 class="movie-row__title">Minions: The Rise of Gru</h2>
+          <h2 class="movie-row__title">You might also like</h2>
           <div class="movie-row__grid">
             <a href="movie.html" class="movie-item">
               <img
                 src="https://i.ytimg.com/vi/6DxjJzmYsXo/maxresdefault.jpg"
-                alt="Watch Minions: The Rise of Gru"
+                alt="Movie poster for Minions: The Rise of Gru"
                 class="movie-item__image"
               />
               <h3 class="movie-item__title">Minions: The Rise of Gru</h3>
@@ -133,7 +133,7 @@
             <a href="movie.html" class="movie-item">
               <img
                 src="https://i.ytimg.com/vi/6DxjJzmYsXo/maxresdefault.jpg"
-                alt="Watch Minions: The Rise of Gru"
+                alt="Movie poster for Minions: The Rise of Gru"
                 class="movie-item__image"
               />
               <h3 class="movie-item__title">Minions: The Rise of Gru</h3>
@@ -144,7 +144,7 @@
             <a href="movie.html" class="movie-item">
               <img
                 src="https://i.ytimg.com/vi/6DxjJzmYsXo/maxresdefault.jpg"
-                alt="Watch Minions: The Rise of Gru"
+                alt="Movie poster for Minions: The Rise of Gru"
                 class="movie-item__image"
               />
               <h3 class="movie-item__title">Minions: The Rise of Gru</h3>
@@ -155,7 +155,7 @@
             <a href="movie.html" class="movie-item hide-on-mobile">
               <img
                 src="https://i.ytimg.com/vi/6DxjJzmYsXo/maxresdefault.jpg"
-                alt="Watch Minions: The Rise of Gru"
+                alt="Movie poster for Minions: The Rise of Gru"
                 class="movie-item__image"
               />
               <h3 class="movie-item__title">Minions: The Rise of Gru</h3>
@@ -166,7 +166,7 @@
             <a href="movie.html" class="movie-item hide-on-mobile">
               <img
                 src="https://i.ytimg.com/vi/6DxjJzmYsXo/maxresdefault.jpg"
-                alt="Watch Minions: The Rise of Gru"
+                alt="Movie poster for Minions: The Rise of Gru"
                 class="movie-item__image"
               />
               <h3 class="movie-item__title">Minions: The Rise of Gru</h3>
@@ -181,10 +181,10 @@
 
     <footer>
       <p>Notflix &copy; 2024</p>
-      <section class="footer-icons">
-        <figure></figure>
-        <figure></figure>
-        <figure></figure>
+      <section class="footer-icons" aria-label="Social media links">
+        <figure aria-label="Facebook"></figure>
+        <figure aria-label="Twitter"></figure>
+        <figure aria-label="Instagram"></figure>
       </section>
     </footer>
     <script>
