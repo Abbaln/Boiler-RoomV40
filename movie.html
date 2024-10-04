@@ -5,80 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Movie Viewing Page</title>
     <link rel="stylesheet" href="utils.css" />
+    <!-- Add the following style tag or update your utils.css file -->
     <style>
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-        background-color: #141414;
-        color: #fff;
-      }
-      .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 20px;
-      }
       .movie-player {
         width: 100%;
-        aspect-ratio: 16 / 9;
-        background-color: #000;
+        height: 0;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        position: relative;
         margin-bottom: 20px;
       }
-      .movie-info {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-      }
-      .movie-details {
-        flex: 2;
-        padding-right: 20px;
-      }
-      .movie-title {
-        font-size: 24px;
-        margin-bottom: 10px;
-      }
-      .movie-description {
-        font-size: 16px;
-        line-height: 1.5;
-        margin-bottom: 20px;
-      }
-      .movie-metadata {
-        font-size: 14px;
-        color: #999;
-      }
-      .related-movies {
-        flex: 1;
-      }
-      .related-movies h3 {
-        font-size: 18px;
-        margin-bottom: 10px;
-      }
-      .related-movie {
-        display: flex;
-        align-items: center;
-        margin-bottom: 10px;
-      }
-      .related-movie img {
-        width: 100px;
-        height: 56px;
-        object-fit: cover;
-        margin-right: 10px;
-      }
-      .related-movie-title {
-        font-size: 14px;
+      .movie-player iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <button class="btn"><a href="index.html">Back</a></button>
       <div class="movie-player">
-        <!-- Replace with actual video player -->
-        <img
-          src="https://via.placeholder.com/1200x675.png?text=Movie+Player"
-          alt="Movie Player"
-          style="width: 100%; height: 100%"
-        />
+        <!-- YouTube embed for Minions movie trailer -->
+        <iframe
+          width="100%"
+          height="100%"
+          src="https://www.youtube.com/embed/6DxjJzmYsXo"
+          title="Minions Movie Trailer"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
       </div>
       <div class="movie-info">
         <div class="movie-details">
