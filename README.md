@@ -78,4 +78,4 @@ Alice
 – Man fick vara noga med att kolla igenom den kod man fick från cursor så att den inte ändrade något som man redan var nöjd med innan man klistrade in ny kod, så att man inte råkade ersätta något befintligt.
 – Det var kul och effektivt att arbeta så här mycket med AI, och jag upplever det som lärorikt och inte direkt kreativitetshämmande. Det hämmar mer min kreativitet om jag måste sitta länge och jobba med något som jag inte kan lösa på egen hand, att då kunna använda ai för att lösa problem gör att jag inte faller ur mitt flow
 – Jag ville sedan testa att göra något mer avancerat så jag bad AI göra ett film quiz
-– Jag avslutade med att ladda upp all filer till Chat-GPT (har betalversionen) och be den skriva kommentarer i koden som förklarar vad exakt varje rad gör och sedan analysera koden för att ge mig en reflektion om vad som gjorts bra och dåligt och hur man skulle kunna lösa det istället för et bättre resultat.
+– Jag avslutade med att be AIn skriva kommentarer i koden som förklarar vad exakt varje rad gör för att jag ska kunna läsa igenom och förstå den.

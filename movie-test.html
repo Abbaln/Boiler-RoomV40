@@ -2,19 +2,25 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!-- Säkerställer korrekt rendering och touch-zoom för mobila enheter -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Notflix Parody - Movie Quiz</title>
+    <!-- Länkar till externa stilmallar -->
     <link rel="stylesheet" href="utils.css" />
     <link rel="stylesheet" href="movie-test.css" />
   </head>
   <body>
+    <!-- Tillgänglighetslänk för att hoppa över navigation -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <header>
+      <!-- Logotyp och länk till startsidan -->
       <a href="/">
         <img src="notflix-log.png" alt="Notflix Logo" class="logo-image" />
       </a>
       <nav>
+        <!-- Hamburgerikon för mobilmeny -->
         <span class="menu-toggle">&#9776;</span>
+        <!-- Huvudnavigationsmeny -->
         <ul>
           <li><a href="tv-shows.html">TV</a></li>
           <li><a href="movie-category.html">Movies</a></li>
@@ -24,17 +30,23 @@
       </nav>
     </header>
 
+    <!-- Huvudinnehåll -->
     <main id="main-content">
+      <!-- Container för filmquizet -->
       <section id="quiz-container">
         <h1>Discover Your Perfect Movie Match!</h1>
+        <!-- Container för frågor och svarsalternativ -->
         <div id="question-container">
           <h2 id="question"></h2>
           <div id="answer-buttons"></div>
         </div>
+        <!-- Knapp för att gå till nästa fråga (dold som standard) -->
         <button id="next-btn" class="hide">Next</button>
+        <!-- Container för quizresultat (dold som standard) -->
         <div id="result" class="hide">
           <h2>Your Movie Recommendation:</h2>
           <p id="movie-recommendation"></p>
+          <!-- Container för filmaffisch -->
           <div id="movie-poster-container">
             <a id="movie-link" href="#" target="_blank" rel="noopener noreferrer">
               <img id="movie-poster" src="" alt="Movie poster" />
@@ -44,8 +56,10 @@
       </section>
     </main>
 
+    <!-- Sidfot -->
     <footer>
       <p>Notflix &copy; 2024</p>
+      <!-- Container för sociala medieikoner -->
       <section class="footer-icons">
         <figure></figure>
         <figure></figure>
@@ -53,6 +67,7 @@
       </section>
     </footer>
 
+    <!-- Länk till extern JavaScript-fil -->
     <script src="movie-test.js"></script>
   </body>
 </html>
