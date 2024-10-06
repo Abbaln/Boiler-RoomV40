@@ -68,4 +68,14 @@ Dennis
 - Kört lighthouse test och fick 100% på allt.
 - Min reflektion över att använda enbart ai är det går väldigt snabbt i början sen blir det många konstiga fel för ai inte skapat ett bra skal i html med grid eller flex utan kört lite vilda västern. Kommer använda AI för att få fram en bas struktur och sedan jobba vidare själv om något i framtiden.
 
-Boiler-RoomV40
+Alice
+– Jag använde också Cursor som verktyg (för första gången) vilket fungerande så bra när jag lärt mig hur det fungerar, man kunde baserat på vilken uppgift man vill att den ska lösa också välja vilken AI som Cursor ska använda, Claude 3.5 Sonnet var den jag använde mig av men man kunde också välja de olika GPT:erna osv, det var särskilt smidigt för att man chattade med AI:n och kunde chatta med koden direkt i VS-code
+– Efter att vi hade tagit fram de gemensamma grunderna började jag prompta fram strukturen för startsidan av vår streamingsida som vi bestämt oss för att ta fram
+– Vi hade gjort ett gemensamt stylesheet som vi döpt till utils och eftersom att Cursor hela tiden hade tillgång till ens kod kunde man se till att den tog hänsyn till det som låg i den CSS-filen när man fyllde med styling som var specifik för sin egen sida i en annan fil
+– Jag jobbade igenom varje bit del för del tills jag fick det som jag ville. Det tog väldigt många prompts att få sidan att se ut som jag ville samtidigt som elementen och stylingen, men det hade tagit mycket längre tid att lista ut allt själv.
+– Jag bad också cursor om att tillgänglighetsanpassa -sidan efter AA-standard i WCAG.
+– Jag testade sidan med både Lighthouse och WAVE och den fick full pott
+– Man fick vara noga med att kolla igenom den kod man fick från cursor så att den inte ändrade något som man redan var nöjd med innan man klistrade in ny kod, så att man inte råkade ersätta något befintligt.
+– Det var kul och effektivt att arbeta så här mycket med AI, och jag upplever det som lärorikt och inte direkt kreativitetshämmande. Det hämmar mer min kreativitet om jag måste sitta länge och jobba med något som jag inte kan lösa på egen hand, att då kunna använda ai för att lösa problem gör att jag inte faller ur mitt flow
+– Jag ville sedan testa att göra något mer avancerat så jag bad AI göra ett film quiz
+– Jag avslutade med att ladda upp all filer till Chat-GPT (har betalversionen) och be den skriva kommentarer i koden som förklarar vad exakt varje rad gör och sedan analysera koden för att ge mig en reflektion om vad som gjorts bra och dåligt och hur man skulle kunna lösa det istället för et bättre resultat.
