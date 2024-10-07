@@ -209,6 +209,7 @@ a:hover {
 footer {
   background-color: #333;
   padding-top: 20px;
+  padding-bottom: 20px;
   text-align: center;
   color: #fff;
   position: relative;
@@ -231,12 +232,6 @@ figure {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-figure::before {
-  content: "?"; /* Placeholder för fejk-ikoner */
-  color: white;
-  font-size: 20px;
 }
 
 /* Hamburgarmeny för små skärmar */

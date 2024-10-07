@@ -1,51 +1,52 @@
-/* Lägg till detta i början av test.css */
+/* Grundläggande stilar för huvudinnehållet */
 main {
-  padding-top: 80px; /* Justera detta värde baserat på din headers höjd */
+  padding-top: 80px; /* Skapar utrymme för den fasta headern */
   padding-left: 20px;
   padding-right: 20px;
 }
 
 /* Specifika stilar för quiz-containern */
 #quiz-container {
-  max-width: 800px;
-  margin: 2rem auto;
+  max-width: 800px; /* Begränsar bredden för bättre läsbarhet */
+  margin: 2rem auto; /* Centrerar containern och lägger till vertikalt utrymme */
   padding: 2rem;
-  background-color: var(--bg-secondary);
-  border-radius: var(--border-radius);
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  background-color: var(--bg-secondary); /* Använder en fördefinierad bakgrundsfärg */
+  border-radius: var(--border-radius); /* Använder en fördefinierad border-radius */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Lägger till en subtil skugga */
 }
 
 #question-container {
-  margin-bottom: var(--spacing-large);
+  margin-bottom: var(--spacing-large); /* Lägger till utrymme under frågecontainern */
 }
 
-/* Uppdatera den befintliga stilen för #answer-buttons */
+/* Layout för svarsknapparna */
 #answer-buttons {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 kolumner */
-  grid-template-rows: repeat(2, auto); /* 2 rader */
+  grid-template-columns: repeat(2, 1fr); /* Skapar ett 2x2 rutnät för knapparna */
+  grid-template-rows: repeat(2, auto);
   gap: var(--spacing-medium);
-  max-width: 600px; /* Begränsa maxbredden för bättre layout på stora skärmar */
-  margin: 0 auto; /* Centrera knapparna */
+  max-width: 600px; /* Begränsar maxbredden för bättre layout på stora skärmar */
+  margin: 0 auto; /* Centrerar knapparna */
 }
 
-/* Använd den befintliga .btn-klassen från utils.css */
-/* Lägg endast till specifika stilar som inte finns i utils.css */
+/* Stilar för svarsknapparna */
 .btn {
   width: 100%;
-  padding: 15px 10px; /* Öka padding för bättre klickbarhet */
+  padding: 15px 10px; /* Ökar padding för bättre klickbarhet */
   font-size: 1rem;
   text-align: center;
-  min-height: 60px; /* Sätt en minsta höjd för jämn storlek */
+  min-height: 60px; /* Säkerställer en minsta höjd för jämn storlek */
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+/* Döljer element */
 .hide {
   display: none;
 }
 
+/* Stilar för resultatdelen */
 #result {
   text-align: center;
 }
@@ -57,14 +58,14 @@ main {
   margin-bottom: var(--spacing-medium);
 }
 
-/* Mediafrågor för responsivitet */
+/* Responsiv design för mindre skärmar */
 @media (max-width: 768px) {
   #quiz-container {
     padding: 1rem;
   }
 
   #answer-buttons {
-    grid-template-columns: 1fr; /* Ändra till en kolumn på mindre skärmar */
+    grid-template-columns: 1fr; /* Ändrar till en kolumn på mindre skärmar */
   }
 
   .btn {
@@ -83,29 +84,31 @@ main {
   }
 }
 
-/* Lägg till dessa stilar i slutet av filen */
+/* Stilar för filmaffischcontainern */
 #movie-poster-container {
   position: relative;
   width: 100%;
-  max-width: 400px; /* Öka maxbredden för att passa 16:9-formatet bättre */
+  max-width: 400px; /* Begränsar maxbredden för affischen */
   margin: var(--spacing-large) auto 0;
-  aspect-ratio: 16 / 9; /* Ändra till 16:9-format */
+  aspect-ratio: 16 / 9; /* Sätter bildförhållandet till 16:9 */
   overflow: hidden;
-  border-radius: 12px; /* Lägg till rundade hörn på containern */
+  border-radius: 12px; /* Lägger till rundade hörn */
 }
 
 #movie-poster {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Behåll detta för att säkerställa att bilden fyller containern */
-  border-radius: 12px; /* Lägg till rundade hörn på bilden */
-  transition: transform 0.3s ease;
+  object-fit: cover; /* Säkerställer att bilden fyller containern utan att förvrängas */
+  border-radius: 12px;
+  transition: transform 0.3s ease; /* Smidig övergång för hover-effekt */
 }
 
+/* Hover-effekt för filmaffischen */
 #movie-link:hover #movie-poster {
-  transform: scale(1.05);
+  transform: scale(1.05); /* Förstorar bilden något vid hover */
 }
 
+/* Lägger till en play-knapp över affischen vid hover */
 #movie-link::after {
   content: '\25B6'; /* Unicode-tecken för "play" symbol */
   position: absolute;
@@ -122,10 +125,10 @@ main {
 }
 
 #movie-link:hover::after {
-  opacity: 1;
+  opacity: 1; /* Visar play-knappen vid hover */
 }
 
-/* Responsiva justeringar */
+/* Ytterligare responsiva justeringar för mycket små skärmar */
 @media (max-width: 480px) {
   main {
     padding-top: 60px;
@@ -158,6 +161,7 @@ main {
   }
 }
 
+/* Stilar för skip-länken (tillgänglighet) */
 .skip-link {
   position: absolute;
   width: 1px;
