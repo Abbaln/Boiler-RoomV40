@@ -79,3 +79,19 @@ Alice
 – Det var kul och effektivt att arbeta så här mycket med AI, och jag upplever det som lärorikt och inte direkt kreativitetshämmande. Det hämmar mer min kreativitet om jag måste sitta länge och jobba med något som jag inte kan lösa på egen hand, att då kunna använda ai för att lösa problem gör att jag inte faller ur mitt flow
 – Jag ville sedan testa att göra något mer avancerat så jag bad AI göra ett film quiz
 – Jag avslutade med att be AIn skriva kommentarer i koden som förklarar vad exakt varje rad gör för att jag ska kunna läsa igenom och förstå den.
+
+Abbas
+-  Jag hade hand om headern och footern
+- Använde chagtgpt för skapa headern och footern
+- Gick snabbt med få till det, problem uppstod med få den responsiv
+- Flera iterationer med chatgpt om saker som inte funka rätt, som till exempel hamburgaremenyn som inte syndes på mindre skärmar.
+- Försökte lägga till en popcorn-button som chatgpt hade stora problem med få centrerat till en början och senare fick vi besluta oss för ta bort den.
+- Att jobba med AI var effektivt med slänga ihop grejer på skärmen men inte lycka kontrollerat som jobba med sin egen code. 
+
+Retro möte:
+- Bra kommunikation
+- Stöd och hjälp från medlemmar
+- Snabba beslut och jobbar på effektivt.
+- Bra planering
+- Boiler Room, väldigt givande med ge feedback och gå igenom varandras code
+- Områden och jobba på: Standups med mer struktur, uppdatera trellon oftare.
