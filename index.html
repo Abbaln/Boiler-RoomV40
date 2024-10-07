@@ -1,31 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Notflix - Stream your favorite movies and TV shows</title>
-    <link rel="stylesheet" href="utils.css" />
-    <link rel="stylesheet" href="index.css" />
+<!DOCTYPE html> <!-- Deklarerar att detta är ett HTML5-dokument -->
+<html lang="en"> <!-- Startar HTML-dokumentet och anger språket som engelska -->
+  <head> <!-- Början på head-sektionen som innehåller metadata och länkad information -->
+    <meta charset="UTF-8" /> <!-- Anger teckenkodningen för dokumentet som UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Konfigurerar viewport för responsiv design, anpassar innehållet till enhetens skärmbredd -->
+    <title>Notflix - Stream your favorite movies and TV shows</title> <!-- Sätter sidans titel som visas i webbläsarens flik -->
+    <link rel="stylesheet" href="utils.css" /> <!-- Länkar till en extern CSS-fil för allmänna stilar -->
+    <link rel="stylesheet" href="index.css" /> <!-- Länkar till en extern CSS-fil specifik för denna sida -->
   </head>
-  <body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-    <header>
-      <a href="/">
-        <img src="notflix-log.png" alt="Notflix logo" class="logo-image" />
+  <body> <!-- Början på body-sektionen som innehåller sidans synliga innehåll -->
+    <a href="#main-content" class="skip-link">Skip to main content</a> <!-- Tillgänglighetslänk för att hoppa över navigation, hjälper användare med skärmläsare -->
+    <header> <!-- Sidhuvud som innehåller logotyp och navigation -->
+      <a href="/"> <!-- Länk till hemsidan -->
+        <img src="notflix-log.png" alt="Notflix logo" class="logo-image" /> <!-- Logotypbild med alternativ text för tillgänglighet -->
       </a>
-      <nav aria-label="Main navigation">
-        <span class="menu-toggle">&#9776;</span>
-        <ul>
-          <li><a href="tv-shows.html">TV</a></li>
-          <li><a href="movie-category.html">Movies</a></li>
-          <li><a href="movie-test.html">Quiz</a></li>
-          <li><a href="sign-in.html">Sign in</a></li>
+      <nav aria-label="Main navigation"> <!-- Huvudnavigationsmeny med aria-label för tillgänglighet -->
+        <span class="menu-toggle">&#9776;</span> <!-- Hamburgerikon för mobilmeny, använder Unicode-tecken -->
+        <ul> <!-- Oordnad lista för navigationslänkar -->
+          <li><a href="tv-shows.html">TV</a></li> <!-- Länk till TV-sidor -->
+          <li><a href="movie-category.html">Movies</a></li> <!-- Länk till filmsidor -->
+          <li><a href="movie-test.html">Quiz</a></li> <!-- Länk till filmquiz -->
+          <li><a href="sign-in.html">Sign in</a></li> <!-- Länk till inloggningssida -->
         </ul>
       </nav>
     </header>
-    <main id="main-content">
-      <section class="hero">
-        <div class="video-container">
+    <main id="main-content"> <!-- Huvudinnehållssektion med id för tillgänglighetslänken -->
+      <section class="hero"> <!-- Hero-sektion, ofta använd för att visa framträdande innehåll -->
+        <div class="video-container"> <!-- Container för bakgrundsvideo -->
           <iframe
             class="background-video"
             src="https://www.youtube.com/embed/FaR1mQ2b0Ck?autoplay=1&mute=1&controls=0&loop=1&playlist=FaR1mQ2b0Ck&modestbranding=1&rel=0&showinfo=0&fs=0&iv_load_policy=3"
@@ -33,14 +33,14 @@
             allow="autoplay; encrypted-media"
             allowfullscreen
             title="Titanic 2 - Trailer"
-          ></iframe>
+          ></iframe> <!-- Inbäddad YouTube-video som bakgrund med olika parametrar för att styra uppspelningen -->
         </div>
-        <div class="hero-content">
-          <h1>Notflix presents</h1>
-          <p class="slogan">Binge-Worthy Nonsense</p>
-          <h2 class="title">Titanic 2</h2>
-          <p class="description">One day Jack knocks on Rose's door as if nothing ever happened. Why did he fake his death and hide from her all these years? Will she be able to trust him again? Watch the long-awaited sequel today!</p>
-          <div class="buttons">
+        <div class="hero-content"> <!-- Innehåll i hero-sektionen -->
+          <h1>Notflix presents</h1> <!-- Huvudrubrik -->
+          <p class="slogan">Binge-Worthy Nonsense</p> <!-- Slogan eller underrubrik -->
+          <h2 class="title">Titanic 2</h2> <!-- Filmtitel -->
+          <p class="description">One day Jack knocks on Rose's door as if nothing ever happened. Why did he fake his death and hide from her all these years? Will she be able to trust him again? Watch the long-awaited sequel today!</p> <!-- Filmbeskrivning -->
+          <div class="buttons"> <!-- Container för knappar -->
             <a
               href="https://www.amazon.com/gp/video/detail/B0041FZQQI/ref=atv_dp_share_cu_r"
               target="_blank"
@@ -48,25 +48,25 @@
               class="btn"
               aria-label="Watch Titanic 2 on Amazon Prime Video">
               Watch Titanic 2
-            </a>
+            </a> <!-- Knapp för att se filmen, öppnas i ny flik med säkerhetsattribut -->
           </div>
         </div>
       </section>
 
-      <section class="movie-row news">
-        <div class="container">
-          <h2 class="movie-row__title">New Releases</h2>
-          <div class="movie-row__grid">
-            <a href="movie.html" class="movie-item">
+      <section class="movie-row news"> <!-- Sektion för nya filmsläpp -->
+        <div class="container"> <!-- Container för innehållet -->
+          <h2 class="movie-row__title">New Releases</h2> <!-- Rubrik för sektionen -->
+          <div class="movie-row__grid"> <!-- Rutnät för filmposters -->
+            <a href="movie.html" class="movie-item"> <!-- Länk till filmsida -->
               <img
                 src="https://i.ytimg.com/vi/6DxjJzmYsXo/maxresdefault.jpg"
                 alt="Movie poster for Minions: The Rise of Gru"
                 class="movie-item__image"
-              />
-              <h3 class="movie-item__title">Minions: The Rise of Gru</h3>
+              /> <!-- Filmposter med alternativ text -->
+              <h3 class="movie-item__title">Minions: The Rise of Gru</h3> <!-- Filmtitel -->
               <p class="movie-item__description">
                 Bananas go extinct, minions go bananas!
-              </p>
+              </p> <!-- Kort beskrivning av filmen -->
             </a>
             <a href="movie.html" class="movie-item">
               <img
