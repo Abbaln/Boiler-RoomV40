@@ -1,9 +1,11 @@
 /* Hero styles */
 .hero {
-  position: relative;
+  position: sticky;
+  top: 0;
   height: 100vh;
   width: 100%;
   overflow: hidden;
+  z-index: 1;
 }
 
 .video-container {
@@ -12,37 +14,65 @@
   left: 0;
   width: 100%;
   height: 100%;
+  pointer-events: none; /* Förhindrar interaktion med videon */
+  overflow: hidden; /* Döljer eventuella overflow-element */
+  z-index: -1;
 }
 
 .background-video {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 56.25vw; /* Håller 16:9 aspect ratio */
+  min-height: 100vh;
+  min-width: 177.77vh; /* 100 * 16 / 9 */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   object-fit: cover;
 }
 
 .hero-content {
   position: absolute;
-  bottom: 15%;
-  left: 5%;
-  width: 50%;
-  z-index: 20;
+  top: 50%;
+  left: 5%; /* Ändrat från 50% till 5% */
+  transform: translateY(-50%); /* Ta bort translateX(-50%) */
+  text-align: left; /* Ändrat från center till left */
+  width: 50%; /* Justerat från 80% till 50% för att ge mer utrymme */
+  max-width: 600px; /* Justerat från 800px till 600px */
+  z-index: 2;
 }
 
-.title {
+.hero-content h1 {
+  font-size: 4rem;
+  margin-bottom: var(--spacing-small);
+  color: var(--netflix-red);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero-content .slogan {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: var(--spacing-medium);
+  color: var(--text-color);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.hero-content .title {
   font-size: 3rem;
   margin-bottom: var(--spacing-medium);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.description {
+.hero-content .description {
   font-size: 1.25rem;
   margin-bottom: var(--spacing-large);
-  max-width: 600px;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-.buttons {
+.hero-content .buttons {
   display: flex;
+  justify-content: flex-start; /* Ändrat från center till flex-start */
   gap: var(--spacing-medium);
 }
 
@@ -55,7 +85,7 @@
   right: 0;
   bottom: 0;
   background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0.8) 100%);
-  z-index: 15;
+  z-index: 1;
 }
 
 /* Animationer för innehållet */
@@ -72,12 +102,16 @@
   }
 }
 
-.title { animation-delay: 0.2s; }
-.description { animation-delay: 0.4s; }
-.buttons { animation-delay: 0.6s; }
+.hero-content h1 { animation-delay: 0.1s; }
+.hero-content .slogan { animation-delay: 0.3s; }
+.hero-content .title { animation-delay: 0.5s; }
+.hero-content .description { animation-delay: 0.7s; }
+.hero-content .buttons { animation-delay: 0.9s; }
 
 /* Header styles */
 header {
+  position: relative;
+  z-index: 1000; /* Säkerställ att headern är ovanför hero-sektionen */
   background-color: transparent;
   transition: background-color 0.3s ease;
 }
@@ -92,7 +126,11 @@ header.scrolled {
     width: 90%;
   }
 
-  .title {
+  .hero-content h1 {
+    font-size: 1.2rem;
+  }
+
+  .hero-content h2 {
     font-size: 2rem;
   }
 
@@ -105,6 +143,8 @@ header.scrolled {
 .movie-row {
     padding: var(--spacing-large) 0;
     background-color: var(--bg-primary);
+    position: relative;
+    z-index: 2;
   }
   
   .movie-row__title {
@@ -147,3 +187,41 @@ header.scrolled {
       display: none;
     }
   }
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px; /* Ökat padding */
+  font-size: 1.2rem; /* Ökat fontstorlek */
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--text-color);
+  background-color: var(--netflix-red);
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--netflix-red-hover);
+}
+
+/* Om du vill ha en ännu större knapp för desktop, kan du lägga till denna media query */
+@media (min-width: 768px) {
+  .btn {
+    padding: 16px 32px;
+    font-size: 1.4rem;
+  }
+}

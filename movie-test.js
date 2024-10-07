@@ -35,6 +35,29 @@ const movieRecommendations = {
   d: "Slim Susie: A quirky Swedish dark comedy!"
 };
 
+const movieDetails = {
+  a: {
+    title: "Shrek 2",
+    imdbLink: "https://www.imdb.com/title/tt0298148/",
+    posterUrl: "images/shrek2.jpg"  // Uppdatera denna sökväg
+  },
+  b: {
+    title: "The Lord of the Rings: The Fellowship of the Ring",
+    imdbLink: "https://www.imdb.com/title/tt0120737/",
+    posterUrl: "images/lotr.jpg"  // Uppdatera denna sökväg
+  },
+  c: {
+    title: "The Mummy Returns",
+    imdbLink: "https://www.imdb.com/title/tt0209163/",
+    posterUrl: "images/mummy_returns.jpg"  // Uppdatera denna sökväg
+  },
+  d: {
+    title: "Slim Susie",
+    imdbLink: "https://www.imdb.com/title/tt0323998/",
+    posterUrl: "images/slim_susie.jpg"  // Uppdatera denna sökväg
+  }
+};
+
 let currentQuestionIndex = 0;
 let score = {};
 
@@ -81,13 +104,22 @@ function showResult() {
   nextButton.classList.add('hide');
   resultDiv.classList.remove('hide');
   
-  const recommendedMovie = getRecommendedMovie();
-  movieRecommendationElement.innerText = recommendedMovie;
+  const recommendedMovieKey = getRecommendedMovie();
+  const recommendedMovie = movieDetails[recommendedMovieKey];
+  
+  movieRecommendationElement.innerText = movieRecommendations[recommendedMovieKey];
+  
+  const moviePoster = document.getElementById('movie-poster');
+  const movieLink = document.getElementById('movie-link');
+  
+  moviePoster.src = recommendedMovie.posterUrl;
+  moviePoster.alt = `Movie poster for ${recommendedMovie.title}`;
+  movieLink.href = recommendedMovie.imdbLink;
+  movieLink.title = `Watch ${recommendedMovie.title}`; // Lägg till denna rad
 }
 
 function getRecommendedMovie() {
-  const maxScore = Object.entries(score).reduce((a, b) => a[1] > b[1] ? a : b)[0];
-  return movieRecommendations[maxScore];
+  return Object.entries(score).reduce((a, b) => a[1] > b[1] ? a : b)[0];
 }
 
 startQuiz();
