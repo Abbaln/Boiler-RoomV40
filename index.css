@@ -122,7 +122,7 @@
 .hero-content .description { animation-delay: 0.7s; }
 .hero-content .buttons { animation-delay: 0.9s; }
 
-/* Header styles */
+/* Header-stilar */
 header {
   position: fixed; /* Fixerar headern överst på sidan */
   top: 0;
@@ -137,7 +137,7 @@ header.scrolled {
   background-color: var(--netflix-black);
 }
 
-/* Responsive design */
+/* Responsiv design för mindre skärmar */
 @media (max-width: 768px) {
   .hero {
     height: calc(100vh - 60px); /* Justerar höjden för mindre header på mobila enheter */
@@ -178,16 +178,16 @@ header.scrolled {
   
   .movie-row__grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(5, 1fr); /* Skapar ett rutnät med 5 kolumner */
     gap: var(--spacing-medium);
   }
   
   .movie-item {
-    transition: transform var(--transition-speed) ease;
+    transition: transform var(--transition-speed) ease; /* Smidig övergång för hover-effekt */
   }
   
   .movie-item:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); /* Förstorar elementet något vid hover */
   }
   
   .movie-item__image {
@@ -204,11 +204,11 @@ header.scrolled {
   /* Responsiv design för movie-row */
   @media (max-width: 768px) {
     .movie-row__grid {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, 1fr); /* Ändrar till 3 kolumner på mindre skärmar */
     }
   
     .hide-on-mobile {
-      display: none;
+      display: none; /* Döljer vissa element på mobila enheter */
     }
   }
 
@@ -223,7 +223,7 @@ header.scrolled {
 }
 
 .skip-link:focus {
-  top: 0;
+  top: 0; /* Visar skip-länken när den får fokus */
 }
 
 .btn {

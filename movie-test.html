@@ -1,10 +1,15 @@
 <!DOCTYPE html>
+<!-- Deklarerar att detta är ett HTML5-dokument -->
 <html lang="en">
+  <!-- Startar HTML-dokumentet och anger språket som engelska -->
   <head>
+    <!-- Början på head-sektionen som innehåller metadata och länkad information -->
     <meta charset="UTF-8" />
+    <!-- Anger teckenkodningen för dokumentet som UTF-8 -->
     <!-- Säkerställer korrekt rendering och touch-zoom för mobila enheter -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Notflix Parody - Movie Quiz</title>
+    <!-- Sätter sidans titel som visas i webbläsarens flik -->
     <!-- Länkar till externa stilmallar -->
     <link
       rel="stylesheet"
@@ -17,22 +22,29 @@
     <link rel="stylesheet" href="movie-test.css" />
   </head>
   <body>
+    <!-- Början på body-sektionen som innehåller sidans synliga innehåll -->
     <!-- Tillgänglighetslänk för att hoppa över navigation -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <header>
+      <!-- Sidhuvud som innehåller logotyp och navigation -->
       <!-- Logotyp och länk till startsidan -->
       <a href="/">
         <img src="notflix-log.png" alt="Notflix Logo" class="logo-image" />
       </a>
       <nav>
+        <!-- Huvudnavigationsmeny -->
         <!-- Hamburgerikon för mobilmeny -->
         <span class="menu-toggle">&#9776;</span>
         <!-- Huvudnavigationsmeny -->
         <ul>
           <li><a href="tv-shows.html">TV</a></li>
+          <!-- Länk till TV-sidor -->
           <li><a href="movie-category.html">Movies</a></li>
+          <!-- Länk till filmsidor -->
           <li><a href="movie-test.html">Quiz</a></li>
+          <!-- Länk till filmquiz -->
           <li><a href="sign-in.html">Sign in</a></li>
+          <!-- Länk till inloggningssida -->
         </ul>
       </nav>
     </header>
@@ -42,17 +54,22 @@
       <!-- Container för filmquizet -->
       <section id="quiz-container">
         <h1>Discover Your Perfect Movie Match!</h1>
+        <!-- Huvudrubrik för quizet -->
         <!-- Container för frågor och svarsalternativ -->
         <div id="question-container">
           <h2 id="question"></h2>
+          <!-- Plats för quizfrågan -->
           <div id="answer-buttons"></div>
+          <!-- Plats för svarsalternativ -->
         </div>
         <!-- Knapp för att gå till nästa fråga (dold som standard) -->
         <button id="next-btn" class="hide">Next</button>
         <!-- Container för quizresultat (dold som standard) -->
         <div id="result" class="hide">
           <h2>Your Movie Recommendation:</h2>
+          <!-- Rubrik för rekommendationen -->
           <p id="movie-recommendation"></p>
+          <!-- Plats för filmrekommendation -->
           <!-- Container för filmaffisch -->
           <div id="movie-poster-container">
             <a
@@ -62,6 +79,7 @@
               rel="noopener noreferrer"
             >
               <img id="movie-poster" src="" alt="Movie poster" />
+              <!-- Plats för filmaffisch -->
             </a>
           </div>
         </div>
@@ -86,5 +104,6 @@
 
     <!-- Länk till extern JavaScript-fil -->
     <script src="movie-test.js"></script>
+    <!-- Länk till JavaScript-filen som hanterar quizlogiken -->
   </body>
 </html>
