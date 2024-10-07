@@ -50,7 +50,7 @@ I used cursor as my AI
 - I then checked its responsiveness, which required some media queries, so I asked it to make the page responsive down to the smallest screen width 320px
 - I added a background image and asked the AI to make sure the background image stays centered on smaller screens (SO helpful!!)
 
-All in all it was a very useful tool which saved me a lot of time, I think if I did not have accessibility tools such as WAVE and lighthouse then the page would be less functional. But I will definitely use this tool in the future for the basic layout of my pages.
+All in all it was a very useful tool which saved me a lot of time, I think if I did not have accessibility tools such as WAVE and lighthouse then the page would be less functional for people using page reader, or other accessibility features. Because my page was rather simple I found the code easy to wokr with and not many problems arose. I did find when trying to work out some bugs on other pages that it can be challenging to know where the bugs are and how to fix them without causing a domino effect of chaos. I believe over time and with practice it can get easier to work with AI as a tool, but I don't feel fully resplaceable yet... I will definitely use this tool in the future for the basic layout of my pages. 
 
 Anton
 Jag använde också Cursor, smidigt verktyg.
