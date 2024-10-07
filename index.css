@@ -1,45 +1,59 @@
-/* Hero styles */
+/* Hero-sektion: Huvuddelen av landningssidan */
 .hero {
-  position: sticky;
+  position: relative; /* Positionerar elementet relativt till dess normala position */
   top: 0;
-  height: 100vh;
+  height: calc(100vh - 80px); /* Sätter höjden till hela viewporten minus headerns höjd */
   width: 100%;
-  overflow: hidden;
-  z-index: 1;
+  overflow: hidden; /* Döljer innehåll som går utanför sektionen */
+  z-index: 1; /* Sätter stackningsordningen */
+  margin-top: 80px; /* Skapar utrymme för den fasta headern */
 }
 
+/* Container för bakgrundsvideo */
 .video-container {
-  position: absolute;
+  position: absolute; /* Positionerar elementet absolut inom dess närmaste positionerade förälder */
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   pointer-events: none; /* Förhindrar interaktion med videon */
-  overflow: hidden; /* Döljer eventuella overflow-element */
-  z-index: -1;
+  overflow: hidden;
+  z-index: 1; /* Placerar videon över bakgrunden men under overlayen */
 }
 
+/* Stilar för själva bakgrundsvideon */
 .background-video {
-  width: 100vw;
-  height: 56.25vw; /* Håller 16:9 aspect ratio */
-  min-height: 100vh;
-  min-width: 177.77vh; /* 100 * 16 / 9 */
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Säkerställer att videon täcker hela containern utan att förvrängas */
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  object-fit: cover;
+  top: 0;
+  left: 0;
 }
 
-.hero-content {
+/* Svart transparent overlay över hela hero-sektionen och ovanför videon */
+.hero::before {
+  content: '';
   position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Svart bakgrund med 50% opacitet */
+  z-index: 2; /* Placerar overlayen ovanför videon men under innehållet */
+}
+
+/* Container för hero-sektionens innehåll */
+.hero-content {
+  position: relative;
   top: 50%;
-  left: 5%; /* Ändrat från 50% till 5% */
-  transform: translateY(-50%); /* Ta bort translateX(-50%) */
-  text-align: left; /* Ändrat från center till left */
-  width: 50%; /* Justerat från 80% till 50% för att ge mer utrymme */
-  max-width: 600px; /* Justerat från 800px till 600px */
-  z-index: 2;
+  left: 5%;
+  transform: translateY(-50%); /* Centrerar innehållet vertikalt */
+  text-align: left;
+  width: 50%;
+  max-width: 600px;
+  z-index: 3; /* Placerar innehållet ovanför både videon och den svarta overlayen */
+  padding: 20px;
 }
 
 .hero-content h1 {
@@ -84,7 +98,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0.8) 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%);
   z-index: 1;
 }
 
@@ -110,10 +124,13 @@
 
 /* Header styles */
 header {
-  position: relative;
-  z-index: 1000; /* Säkerställ att headern är ovanför hero-sektionen */
-  background-color: transparent;
-  transition: background-color 0.3s ease;
+  position: fixed; /* Fixerar headern överst på sidan */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Säkerställer att headern är överst i stackningsordningen */
+  background-color: var(--bg-primary);
+  transition: background-color 0.3s ease; /* Smidig övergång för bakgrundsfärg */
 }
 
 header.scrolled {
@@ -122,8 +139,15 @@ header.scrolled {
 
 /* Responsive design */
 @media (max-width: 768px) {
+  .hero {
+    height: calc(100vh - 60px); /* Justerar höjden för mindre header på mobila enheter */
+    margin-top: 60px;
+  }
+
   .hero-content {
-    width: 90%;
+    width: 90%; /* Ökar bredden på innehållet för bättre läsbarhet på små skärmar */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centrerar innehållet både horisontellt och vertikalt */
   }
 
   .hero-content h1 {
