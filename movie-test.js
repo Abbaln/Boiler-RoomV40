@@ -1,3 +1,24 @@
+
+      // Hitta elementet för menyn och hamburgarikonen
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navMenu = document.querySelector("nav ul");
+
+      // Lyssna på klick på hamburgarikonen
+      menuToggle.addEventListener("click", () => {
+        // Växla klassen "active" på menyn för att visa eller dölja den
+        navMenu.classList.toggle("active");
+      });
+
+      // Lägg till denna kod för att hantera header-bakgrunden
+      window.addEventListener("scroll", () => {
+        const header = document.querySelector("header");
+        if (window.scrollY > 50) {
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
+      });
+
 // Definierar en array med frågor och svarsalternativ för quizet
 const questions = [
   {
